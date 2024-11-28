@@ -4,6 +4,15 @@
     <meta content=noindex,nofollow name=robots>
     <title>Super Mario 63</title>
 </head>
+    <style>
+        html,
+        body {
+            margin: 0;
+            text-align: center;
+            height: 100%;
+            overflow: hidden;       
+        }
+    </style>
 <body>
     <div id=container></div>
     <script>
@@ -19,7 +28,6 @@
             var gameRatio = ((flashX / flashY).toFixed(4)) * 100;
             document.getElementsByTagName("ruffle-player")[0].style.height = "100vh";
             document.getElementsByTagName("ruffle-player")[0].style.width = gameRatio + "vh";
-            document.getElementsByTagName("ruffle-player")[0].style.boxShadow = "0 0 5vmin 1vmin black";
         });       
     </script>
     <script src="https://unpkg.com/@ruffle-rs/ruffle"></script>
