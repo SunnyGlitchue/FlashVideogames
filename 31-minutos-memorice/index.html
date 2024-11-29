@@ -1,24 +1,35 @@
 <!DOCTYPE html>
-<html>
+<html lang=en>
 <head>
-  <title>31 Minutos Memorice</title>
-  <style>
-    body {
-      margin: 0;
-      padding: 0;
-    }
-    embed {
-      width: 100%;
-      height: 100vh; /* Full viewport height */
-    }
-  </style>
+    <meta content=noindex,nofollow name=robots>
+    <title>31 Minutos Memorice</title>
 </head>
+    <style>
+        html,
+        body {
+            margin: 0;
+            text-align: center;
+            height: 100%;
+            overflow: hidden;       
+        }
+    </style>
 <body>
-
-<script src="https://unpkg.com/@ruffle-rs/ruffle"></script>
-<div style="text-align: center;">
-  <embed src="https://sunnyglitchue.github.io/FlashVideogames/memorice31min.swf">
-</div>
-
+    <div id=container></div>
+    <script>
+        window.RufflePlayer = window.RufflePlayer || {};
+        window.addEventListener("DOMContentLoaded", () => {
+            let ruffle = window.RufflePlayer.newest();
+            let player = ruffle.createPlayer();
+            let container = document.getElementById("container");
+            container.appendChild(player);
+            player.load("https://sunnyglitchue.github.io/FlashVideogames/memorice31min.swf");
+            var flashX = 550;
+            var flashY = 400;
+            var gameRatio = ((flashX / flashY).toFixed(4)) * 100;
+            document.getElementsByTagName("ruffle-player")[0].style.height = "100vh";
+            document.getElementsByTagName("ruffle-player")[0].style.width = gameRatio + "vh";
+        });       
+    </script>
+    <script src="https://unpkg.com/@ruffle-rs/ruffle"></script>
 </body>
 </html>
