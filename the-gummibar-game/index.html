@@ -26,8 +26,8 @@
             var flashX = 550;
             var flashY = 400;
             var gameRatio = ((flashX / flashY).toFixed(4)) * 100;
-            document.getElementsByTagName("ruffle-player")[0].style.height = "480px";
-            document.getElementsByTagName("ruffle-player")[0].style.width = "640px";
+            document.getElementsByTagName("ruffle-player")[0].style.height = "100vh";
+            document.getElementsByTagName("ruffle-player")[0].style.width = gameRatio + "vh";
         });       
     </script>
     <script src="https://unpkg.com/@ruffle-rs/ruffle"></script>
