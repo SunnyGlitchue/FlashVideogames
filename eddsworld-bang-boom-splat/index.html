@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang=en>
+<head>
+    <meta content=noindex,nofollow name=robots>
+    <title>Eddsworld's Bang, Boom, Splat!</title>
+</head>
+    <style>
+        html,
+        body {
+            margin: 0;
+            text-align: center;
+            height: 100%;
+            overflow: hidden;       
+        }
+    </style>
+<body>
+    <div id=container></div>
+    <script>
+        window.RufflePlayer = window.RufflePlayer || {};
+        window.addEventListener("DOMContentLoaded", () => {
+            let ruffle = window.RufflePlayer.newest();
+            let player = ruffle.createPlayer();
+            let container = document.getElementById("container");
+            container.appendChild(player);
+            player.load("	http://uploads.ungrounded.net/450000/450778_Bang_Boom_Splat.swf");
+            var flashX = 550;
+            var flashY = 400;
+            var gameRatio = ((flashX / flashY).toFixed(4)) * 100;
+            document.getElementsByTagName("ruffle-player")[0].style.height = "100vh";
+            document.getElementsByTagName("ruffle-player")[0].style.width = gameRatio + "vh";
+        });       
+    </script>
+    <script src="https://unpkg.com/@ruffle-rs/ruffle"></script>
+</body>
+</html>
